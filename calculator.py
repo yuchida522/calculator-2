@@ -19,5 +19,8 @@ while True:
     if operator == "+":
         answer = add(int(num1), int(num2))
     
+    elif operator == "-":
+        answer = subtract(int(num1), int(num2))
+    
     print(answer)
     
