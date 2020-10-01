@@ -13,7 +13,9 @@ while True:
 #variables
     operator = expression_tokens[0]
     num1 = expression_tokens[1]
-    num2 = expression_tokens[2]
+    
+    if len(expression_tokens) == 3:
+        num2 = expression_tokens[2]
 
     #list of operations here:
     if operator == "+":
@@ -22,5 +24,19 @@ while True:
     elif operator == "-":
         answer = subtract(int(num1), int(num2))
     
+    elif operator == "*":
+        answer = multiply(int(num1), int(num2))
+    
+    elif operator == "/":
+        answer = divide(int(num1), int(num2))
+    
+    elif operator == "square":
+        answer = square(int(num1))
+    
+    elif operator == "cube":
+        answer = cube(int(num1))
+    
+    
+
     print(answer)
     
